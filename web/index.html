@@ -8,19 +8,19 @@
     <title>东十二424の小站</title>
     <header>
         <nav>
-            <ul class="navigation">
+            <ul class="navigation">                         <!--顶部导航栏-->
                 <li><a href="#backtoclass">回到班级主页</a></li>
                 <li><a href="#">首页</a></li>
                 <li>
                     <a href="#">寝室成员</a>
-                    <ul class="dropdown">
+                    <ul class="dropdown">                   <!---设置下拉菜单-->
                         <li><a href="#member1">成佳星</a></li>
                         <li><a href="#member2">宋轩名</a></li>
                         <li><a href="#member3">唐斌</a></li>
                         <li><a href="#member4">唐俊杰</a></li>
                     </ul>
                 </li>
-                <li><a href="#life">寝室生活</a></li>
+                <li><a href="life.html">寝室生活</a></li>
                 <li><a href="frendlinks.html">友情链接</a></li>
                 <!-- 更多导航项 -->
             </ul>
@@ -28,6 +28,28 @@
     </header>
 </head>
 <body>
-    Welcome to our dormitory!
+    <div class="background-slider"></div>
+    <script>
+        const images = [
+        'url(../image/graph.jpg)',
+        'url(../image/salah.jpg)',
+        'url(../image/city.jpg)',
+        'url(../image/csgo.jpg)',
+        'url(../image/kingofhonor.jpg)'
+        // 更多图片URL
+        ];
+
+        let index = 0; // 当前显示的图片索引
+        const slider = document.querySelector('.background-slider');
+
+        // 切换到下一张图片
+        function nextSlide() {
+            index = (index + 1) % images.length;
+            slider.style.backgroundImage = images[index];
+        }
+
+        // 自动播放轮播
+        setInterval(nextSlide, 3000); // 每3000毫秒（3秒）切换到下一张图片
+    </script>
 </body>
 </html>

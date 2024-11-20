@@ -4,11 +4,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-body {
-    background-image: url('../image/hust.jpeg');/* 背景图片路径 */
-    background-attachment: fixed; /* 背景随内容滚动 */
-    background-size: cover; /* 覆盖整个视口 */
-}
 header {
     background-color: #0c008d;
     color: #fff;
@@ -76,4 +71,17 @@ nav {
 /* 当鼠标悬停在导航项上时显示下拉菜单 */
 .navigation li:hover .dropdown {
     display: block;
+}
+
+/* 背景图片设置 */
+.background-slider {
+    position: fixed; /* 或 absolute，取决于你的需求 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 确保背景在内容之下 */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease; /* 平滑过渡效果 */
 }
