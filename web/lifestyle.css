@@ -1,85 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    /* background-color: #f4f4f4; */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/graph.jpg');
-    background-size: cover;
+    
 }
-header {
-    /*background-color: #0c008d;*/
-    background: transparent;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav {
-    width: 100%;
-}
-
-.navigation {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.navigation li {
-    float: left; /* 使列表项水平排列 */
-}
-
-.navigation li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navigation li a:hover {
-    /*background: transparent;*/
-    background-color: purple;
-    color: green;
-}
-
-/* 为当前活跃的导航链接添加样式 */
-.navigation .active {
-    background-color: #4CAF50;
-}
-/* 下拉菜单样式 */
-.dropdown {
-    display: none; /* 默认隐藏下拉菜单 */
-    position: absolute; /* 绝对定位 */
-    background-color: #333;
-    min-width: 160px; /* 下拉菜单的宽度 */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* 阴影效果 */
-    z-index: 1; /* 确保下拉菜单在其他内容之上 */
-}
-
-/* 下拉菜单中的链接样式 */
-.dropdown li {
-    float: none; /* 清除浮动 */
-}
-.dropdown li a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-/* 鼠标悬停在下拉菜单链接上时的样式 */
-.dropdown li a:hover {
-    background-color: #555;
-}
-
-/* 当鼠标悬停在导航项上时显示下拉菜单 */
-.navigation li:hover .dropdown {
-    display: block;
-}
-
-/* 背景图片设置 */
-.background-slider {
+.background {
     position: fixed; /* 或 absolute，取决于你的需求 */
     top: 0;
     left: 0;
@@ -88,16 +10,30 @@ nav {
     z-index: -1; /* 确保背景在内容之下 */
     background-size: cover;
     background-position: center;
-    transition: background-image 0.5s ease; /* 平滑过渡效果 */
 }
+
+.status {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.status img, .status .Video {
+    max-width: 100%;
+    height: auto;
+}
+
 
 .lighttext {
     font-family:'Courier New', Courier, monospace ;
     font-style: initial;
-    position: absolute;
+    /*
+    position: absolutely;
     top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     margin: 0;
     padding: 0 20px;
     font-size: 40px;
@@ -105,6 +41,22 @@ nav {
     color: #fff;
     /* 先在文字周围生成集中度较高的阴影效果*/
     text-shadow: 0 0 20px #5100ff;
+}
+p.lighttext {
+    font-family:'Courier New', Courier, monospace ;
+    font-style: initial;
+    /*
+    position: absolutely;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    margin: 0;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #0e0005;
+    color: #fff;
+    /* 先在文字周围生成集中度较高的阴影效果*/
+    text-shadow: 0 0 10px #5100ff;
 }
 
 .lighttext::after {
@@ -131,7 +83,7 @@ nav {
       将文字的颜色设置为与文字阴影相同的颜色，并且设置较高的模糊(blur)值：相当于
       以文字和文字轮廓为参考，生成一个弥散的模糊光线效果
     */
-    color: #0f0106;
+    /* color: #0f0106; */
     z-index: -1;
     filter: blur(20px);
   }
@@ -145,9 +97,9 @@ nav {
     height: 100%;
   
     /* 最后在文字底部和周围添加一层模糊的淡淡的环绕光 */
-    background-color: #0e0105;
+    /* background-color: #9c7f86; */
     opacity: 0.5;
-    filter: blur(40px);
+    filter: blur(10px);
     z-index: -1;
   }
 

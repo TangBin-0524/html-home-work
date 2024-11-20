@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../image/hustico.jpeg" sizes="32x32">
+    <link rel="stylesheet" href="lifestyle.css"></link>
     <title>寝室の生活</title>
 </head>
 <body>
-    
+    <div class="background"></div>
+    <section id="dorm-life">
+        <h2 class="lighttext">寝室の生活</h2>
+        <!-- 说说1 -->
+        <div class="status">
+            <p class="lighttext">11-17 xmgg的小火锅</p>
+            <img src="../image/dynamic/11-17.png" alt="xmgg的小火锅">
+        </div>
+        
+        <!-- 说说2 -->
+        <div class="status">
+            <p class="lighttext">工训最快验收小组！</p>
+            <video loop preload="auto" class="Video">
+                <source src="../image/dynamic/test.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- 说说3 -->
+        <div class="status">
+            <p class="lighttext">寝室集体学习，效率倍增！</p>
+            <!-- <img src="study.jpg" alt="集体学习"> -->
+        </div>
+        
+        <!-- 可以继续添加更多的说说 -->
+    </section>
+
+    <script>
+        const slider = document.querySelector('.background');
+        slider.style.backgroundImage = 'url(../image/school.jpeg)';
+        // 获取视频元素
+        var video = document.querySelector('.Video');
+        // 设置视频初始为静音
+        video.muted = true;
+        video.addEventListener('loadeddata', function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            var dataURL = canvas.toDataURL('image/png');
+            video.setAttribute('poster', dataURL);
+        });
+        // 鼠标进入视频时播放视频
+        video.addEventListener('mouseenter', function() {
+            if (video.paused) {
+                video.play().then(() => {
+                video.muted = false; // 取消静音
+                });
+            }
+        });
+
+        // 鼠标离开视频时暂停视频，并静音
+        video.addEventListener('mouseleave', function() {
+            if (!video.paused) {
+                video.pause();
+                video.muted = true; // 设置静音
+            }
+        });
+    </script>
 </body>
 </html>
