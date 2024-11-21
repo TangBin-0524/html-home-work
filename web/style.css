@@ -173,12 +173,12 @@ p.lighttext {
   }
   .transparent-text {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     margin: 0;
     padding: 0;
     transform: translate(-50%, -50%);
-    font-size: 6em;
+    font-size: 5em;
     text-transform: uppercase;
     text-align: center;
     color: #fff;
