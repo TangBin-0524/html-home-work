@@ -1,5 +1,9 @@
 body {
-    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 .background {
     position: fixed; /* 或 absolute，取决于你的需求 */
@@ -11,20 +15,6 @@ body {
     background-size: cover;
     background-position: center;
 }
-
-.status {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background: transparent;
-}
-
-.status img, .status .Video {
-    max-width: 100%;
-    height: auto;
-}
-
 
 .lighttext {
     font-family:'Courier New', Courier, monospace ;
@@ -119,3 +109,62 @@ p.lighttext {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.2);
   }
+
+  .box {
+    position: relative;
+  
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin : 0 auto;
+    width: 800px;
+  
+    transition: all 0.5s;
+  }
+  
+  .box h1 {
+    font-size: 24px;
+  
+    margin-bottom: 10px;
+  
+    transition: color 0.2s;
+  }
+  
+  .box p,.box img {
+    transition: color 0.2s;
+  }
+  .box::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;  
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 0;
+    height: 0;
+    background-color: #41da55;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+    content: "";
+  }
+  
+  .box:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .box:hover {
+    border: 10px solid #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition-delay: 0.2s;
+  }
+  
+  .box:hover h1,
+  .box:hover p {
+    color: #fff;
+  }
+
+  .box img, .box .Video {
+    max-width: 100%;
+    height: auto;
+}
