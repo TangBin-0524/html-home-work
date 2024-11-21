@@ -18,3 +18,6 @@
 
 ### Add life.html：Thu Nov 21 00:35:47 2024
     初步开发了寝室生活的页面，使它能够在前端简单地显示图片，视频和文字，类似于QQ中说说的功能。
+
+### Add a dynamic line and great effects in life.html: Thu Nov 21 11:33:03 2024
+    添加了动态线条，让文字和图片之间有更好的视觉效果。同时给寝室生活的页面添加了动态的效果。
